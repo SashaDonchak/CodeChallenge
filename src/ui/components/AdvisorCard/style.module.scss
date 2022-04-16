@@ -1,0 +1,58 @@
+@import '../../style/constants';
+
+.card {
+  border: 3px solid $color__black;
+  color: #423e37;
+  border-radius: 20px;
+  padding: $grid__gap;
+  font-size: 14px;
+
+  &__wrapper {
+    padding: $grid__gap;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-size: 16px;
+  }
+
+  &__status {
+    font-weight: 900;
+
+    &_online {
+      &::before {
+        content: '';
+        background: $color__green;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 6px;
+      }
+    }
+
+    &_offline {
+      &::before {
+        content: '';
+        background: #9F9AA4;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  &__language, &__reviews {
+    margin: $grid__gap 0 0;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}

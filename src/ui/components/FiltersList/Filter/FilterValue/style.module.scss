@@ -1,0 +1,23 @@
+@import "../../../../style/constants";
+
+.label {
+  display: inline-block;
+
+  & + .label {
+    margin-left: $grid__gap / 2;
+  }
+}
+
+.checkbox {
+  border: 2px solid $color__grey;
+  color: $color__grey;
+  padding: $grid__gap / 3;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+
+  &_checked {
+    color: $color__green;
+    border-color: $color__green;
+  }
+}

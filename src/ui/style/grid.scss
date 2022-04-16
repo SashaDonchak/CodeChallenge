@@ -1,0 +1,16 @@
+@import './constants';
+@import './mixins';
+
+.container {
+  max-width: $grid__width;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+@include generateColumnsWithBreakpoint($grid__columns, $grid__breakpoint);

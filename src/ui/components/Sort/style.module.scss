@@ -1,0 +1,15 @@
+@import '../../style/constants';
+
+.sort {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $grid__gap * 2;
+
+  &__label {
+    width: 100%;
+  }
+
+  &__select {
+    margin-top: $grid__gap / 2;
+  }
+}

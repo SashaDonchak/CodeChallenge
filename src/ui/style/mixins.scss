@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+@mixin createColumnClasses($resolution, $colsNumber) {
+  @for $i from 1 through $colsNumber {
+    .col-#{$resolution}-#{$i} {
+      width: calc(((100 / #{math.div($colsNumber, $i)}) * 1%));
+    }
+  }
+}
+
+@mixin generateColumnsWithBreakpoint($colsNumber, $breakpoint) {
+  @include createColumnClasses('md', $colsNumber);
+
+  @media screen and (max-width: $breakpoint) {
+    @include createColumnClasses('sm', $colsNumber);
+  }
+}
