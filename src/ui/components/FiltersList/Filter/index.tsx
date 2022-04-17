@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 import { AdvisorsContext } from "../../../../infrastructure/store/context/context";
 import useFilter, { FilterValues, FilterKeys } from "../../../../hooks/useFilter";
 
-interface IFilterProps {
+export interface IFilterProps {
     filterKey: FilterKeys;
     values: FilterValues[];
 }

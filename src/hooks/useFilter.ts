@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { IAdvisorsContext } from "../infrastructure/store/context/context";
 import { Advisor, AdvisorLang, AdvisorStatus } from "../models/Advisor";
+import { SET_FILTER } from "../infrastructure/store/context/types";
 
 export type FilterValues = AdvisorLang | AdvisorStatus;
 export type FilterKeys = 'status' | 'lang';
@@ -24,7 +25,7 @@ export default function useFilter(context: React.Context<IAdvisorsContext>): Fil
             filters[filterKey] = filterArr;
         }
 
-        dispatch({ type: "SET_FILTER", payload: filters });
+        dispatch({ type: SET_FILTER, payload: filters });
     };
 
     return [state.filters, changeFilter];

@@ -2,7 +2,7 @@ import React from 'react';
 import { Advisor } from "../../../models/Advisor";
 import styles from './style.module.scss';
 
-interface IAdvisorCardProps {
+export interface IAdvisorCardProps {
     advisor: Advisor;
 }
 
